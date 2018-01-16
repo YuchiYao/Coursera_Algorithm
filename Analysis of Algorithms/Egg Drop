@@ -1,0 +1,16 @@
+Suppose that you have an N-story building (with floors 1 through N) and plenty
+of eggs. An egg breaks if it is dropped from floor T or higher and does not
+break otherwise. Your goal is to devise a strategy to determine the value of T
+given the following limitations on the number of eggs and tosses:
+
+Version 0: 1 egg, ≤ T tosses.
+Version 1: ~1lgN eggs and ~1lgN tosses.
+Version 2: ~lgT eggs and ~2lgT tosses.
+Version 3: 2 eggs and ~2sqrt(N) tosses.
+Version 4: 2 eggs and ≤ c*sqrt(T) tosses for some fixed constant c.
+
+version 0：Go from the bottom to the top 
+Version 1: Like bst
+Version 2: Start at 0 floor and then 2^t floor until eggs break. Then, the floor must between 2^t 2^t-1
+Version 3: Find the size of interval sqrt(N), then from bottom to top sequential search. 
+Version 4: Ask for hint(1+2+3+..=T)  
